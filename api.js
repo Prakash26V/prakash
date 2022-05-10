@@ -324,6 +324,8 @@ router.post("/store/addProduct", uploads.single('productImage'), async (req, res
 
 // logout API
 router.get("/:id/logout", async (req, res) => {
+
+    
     try {
         let checkUser = await Verma.findOne({ _id: req.params.id });
         console.log("asdfgh", checkUser)
